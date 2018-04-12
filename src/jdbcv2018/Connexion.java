@@ -210,3 +210,5 @@ public class Connexion {
         stmt.executeUpdate(requeteMaj);
     }
 }
+
+//Test
