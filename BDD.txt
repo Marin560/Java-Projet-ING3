@@ -1,0 +1,7 @@
+L'interface d'administration de votre base de données est accessible à
+l'adresse http://sql.ece.fr/phpMyAdmin/
+Adresse du serveur : sql-users.ece.fr:3305
+Version du serveur : mysql v5.0
+Nom de la base de données : segado
+Identifiant pour accéder en LECTURE/ECRITURE à la bdd : segado-rw
+Mot de passe associé : zBeoeeZU
