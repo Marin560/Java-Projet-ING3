@@ -20,6 +20,7 @@ public class Controleur {
      */
     public static void main(String[] s) {
         // creation de la fenetre
-        Fenetre f = new Fenetre();
+        Menu m = new Menu();
+        //Fenetre f = new Fenetre();
     }
 }
