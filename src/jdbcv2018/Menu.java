@@ -47,9 +47,9 @@ public class Menu extends JFrame implements ActionListener, ItemListener{
         p1 = new JPanel(); 
        p2 = new JPanel();     
         
-        p0.setLayout(new GridLayout(1, 1)); 
-        p1.setLayout(new GridLayout(10, 4)); 
-        p2.setLayout(new GridLayout(15, 4)); 
+        //p0.setLayout(new GridLayout(1, 1)); 
+        //p1.setLayout(new GridLayout(10, 4)); 
+        //p2.setLayout(new GridLayout(15, 4)); 
         
        p0.add(Recherche); 
         p1.add(MaJ); 
@@ -57,9 +57,12 @@ public class Menu extends JFrame implements ActionListener, ItemListener{
         p2.add(Connexion); 
          
       // disposition geographique des panneaux 
-        add("North", p0); 
-        add("Center", p1); 
-        add("South", p2); 
+        this.getContentPane().add(p0, BorderLayout.NORTH);
+        this.getContentPane().add(p1, BorderLayout.CENTER);
+        this.getContentPane().add(p2, BorderLayout.SOUTH);
+     // add("North", p0); 
+      //  add("Center", p1); 
+       // add("South", p2); 
          
          
   } 
