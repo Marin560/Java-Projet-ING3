@@ -24,56 +24,61 @@ import javax.swing.JTable;
   
 public class Menu extends JFrame implements ActionListener, ItemListener{ 
      
-    private JButton Recherche, MaJ, Reporting, Connexion; 
+    private JButton Recherche, MaJ, Reporting, Connexion; //Bouttons de la fenêtre
     private JPanel p0, p1, p2, p3; 
     
     public JTable jtable;
     public String namebdd;
     
-  public Menu(){ 
+    public Menu(){ //Constructeur
        // creation par heritage de la fenetre 
-        super("Bienvenue dans le logiciel de Gestion du Centre Hospitalier"); 
- 
+        super("Logiciel de Gestion du Centre Hospitalier"); 
+         
+        
         // mise en page (layout) de la fenetre visible 
         setLayout(new BorderLayout()); 
-        setBounds(0, 0, 400, 400); 
+        setSize(1000,1000);
+        //setBounds(0, 0, 400, 400); 
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //Quitte le programme quand la fenêtre est fermée
         setResizable(true); 
         setVisible(true); 
-         
+        
         // Création des boutons 
-         
         Recherche = new JButton("Recherche d'informations"); 
         MaJ = new JButton ("Mise à Jour des données"); 
         Reporting = new JButton ("Reporting"); 
         Connexion = new JButton("Connexion"); 
         
-         
-        // Création de panneaux  
+        // Création des pannels  
         p0 = new JPanel(); 
         p1 = new JPanel(); 
-       //p2 = new JPanel();     
+        p2 = new JPanel();  
+        p3 = new JPanel();
         
-        //p0.setLayout(new GridLayout(1, 1)); 
-        //p1.setLayout(new GridLayout(10, 4)); 
-        //p2.setLayout(new GridLayout(15, 4)); 
+        p0.setLayout(new GridLayout(1, 1)); 
+        p1.setLayout(new GridLayout(10, 4)); 
+        p2.setLayout(new GridLayout(15, 4)); 
         
-       p0.add(Recherche); 
+        
+        p0.add(Recherche); 
         p0.add(MaJ); 
         p0.add(Reporting); 
         p0.add(Connexion); 
+        
+        
+        // disposition geographique des panneaux 
+        this.getContentPane().add(p0, BorderLayout.SOUTH);
+        this.getContentPane().add(p1, BorderLayout.CENTER);
+        this.getContentPane().add(p2, BorderLayout.SOUTH);
+        add("North", p0); 
+        add("Center", p1); 
+        add("South", p2); 
          
-      // disposition geographique des panneaux 
-        this.getContentPane().add(p0, BorderLayout.NORTH);
-        //this.getContentPane().add(p1, BorderLayout.CENTER);
-        //this.getContentPane().add(p2, BorderLayout.SOUTH);
-     // add("North", p0); 
-      //  add("Center", p1); 
-       // add("South", p2); 
+
          
-         
-  }  
+    }  
   
-  public Menu(Connection conn, int choix){
+    public Menu(Connection conn, int choix){ //Constructeur surchargé
      String nameDatabase=null; 
      nameDatabase="hopital";
      namebdd=nameDatabase;

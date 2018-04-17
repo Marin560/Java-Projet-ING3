@@ -31,7 +31,7 @@ public class Fenetre extends JFrame implements ActionListener, ItemListener {
      * 
      */
 
-    private Connexion maconnexion;
+    private Connexion maconnexion; //Ajout d'une nouvelle connexion
     private final JLabel tab, req, res, lignes;
     private final JLabel nameECE, passwdECE, loginBDD, passwdBDD, nameBDD, requeteLabel;
     private final JTextField nameECETexte, loginBDDTexte, requeteTexte, nameBDDTexte;
@@ -300,15 +300,21 @@ public class Fenetre extends JFrame implements ActionListener, ItemListener {
         Object source = evt.getSource();
 
         // tester cas de la commande evenementielle
-        if (source == connect) {
+        if (source == connect) { //Si j'appuie sur le boutton connect, j'essaie de me connecter à la BDD
+            
             ArrayList<String> liste;
+            
             String passwdECEString = new String(passwdECETexte.getPassword());
             String passwdBDDString = new String(passwdBDDTexte.getPassword());
             try {
                 try {
                     // tentative de connexion si les 4 attributs sont remplis
-                    maconnexion = new Connexion(nameECETexte.getText(), passwdECEString,
-                            loginBDDTexte.getText(), passwdBDDString);
+                    
+                    //Connexion au serveur de l'ece à distance
+                    //maconnexion = new Connexion(nameECETexte.getText(), passwdECEString, loginBDDTexte.getText(), passwdBDDString);
+                    
+                    //Connexion au serveur local (Nom bdd, user bdd, mdp bdd)
+                    maconnexion = new Connexion("hopital","root"," ");
 
                     // effacer les listes de tables et de requêtes
                     listeDeTables.removeAll();

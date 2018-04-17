@@ -12,15 +12,10 @@ package jdbcv2018;
  */
 public class Controleur {
 
-    /**
-     *
-     * une methode principal (main) pour lancer l'application
-     *
-     * @param s
-     */
+
     public static void main(String[] s) {
         // creation de la fenetre
-        Menu m = new Menu();
-        //Fenetre f = new Fenetre();
+        //Menu m = new Menu();
+        Fenetre f = new Fenetre();
     }
 }
