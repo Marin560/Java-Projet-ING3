@@ -153,7 +153,7 @@ public class Accueil extends JFrame implements ActionListener, ItemListener {
               //Connexion au serveur local (Nom bdd, user bdd, mdp bdd)
               maconnexion = new Connexion(nameBDDTexte.getText(), "root", "root");
               System.out.println("hello");
-              Menu m = new Menu();
+              Menu m = new Menu(maconnexion.getConn());
               this.dispose();
               
           } catch (SQLException ex) {
