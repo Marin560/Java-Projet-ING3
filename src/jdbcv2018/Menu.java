@@ -13,6 +13,7 @@ import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener; 
 import java.sql.Connection;
 import javax.swing.JButton; 
+import javax.swing.JComboBox;
 import javax.swing.JFrame; 
 import javax.swing.JPanel; 
 import javax.swing.JTable;
@@ -26,7 +27,7 @@ public class Menu extends JFrame implements ActionListener, ItemListener{
      
     private JButton Recherche, MaJ, Reporting, Connexion; //Bouttons de la fenêtre
     private JPanel p0, p1, p2, p3; 
-    
+    private JComboBox ChoixAffichageTab;
     public JTable jtable;
     public String namebdd;
     
@@ -47,7 +48,7 @@ public class Menu extends JFrame implements ActionListener, ItemListener{
         Recherche = new JButton("Recherche d'informations"); 
         MaJ = new JButton ("Mise à Jour des données"); 
         Reporting = new JButton ("Reporting"); 
-        Connexion = new JButton("Connexion"); 
+        //Connexion = new JButton("Connexion"); 
         
         // Création des pannels  
         p0 = new JPanel(); 
@@ -56,14 +57,14 @@ public class Menu extends JFrame implements ActionListener, ItemListener{
         p3 = new JPanel();
         
         p0.setLayout(new GridLayout(1, 1)); 
-        p1.setLayout(new GridLayout(10, 4)); 
+        p1.setLayout(new GridLayout(0,1,-5,5)); 
         p2.setLayout(new GridLayout(15, 4)); 
         
         
         p0.add(Recherche); 
         p0.add(MaJ); 
         p0.add(Reporting); 
-        p0.add(Connexion); 
+        // p0.add(Connexion); 
         
         
         // disposition geographique des panneaux 
