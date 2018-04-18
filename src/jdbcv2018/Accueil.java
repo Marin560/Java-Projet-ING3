@@ -151,7 +151,11 @@ public class Accueil extends JFrame implements ActionListener, ItemListener {
             
           try {
               //Connexion au serveur local (Nom bdd, user bdd, mdp bdd)
-              maconnexion = new Connexion("hopital","root"," ");
+              maconnexion = new Connexion(nameBDDTexte.getText(), "root", "root");
+              System.out.println("hello");
+              Menu m = new Menu();
+              this.dispose();
+              
           } catch (SQLException ex) {
               Logger.getLogger(Accueil.class.getName()).log(Level.SEVERE, null, ex);
           } catch (ClassNotFoundException ex) {
