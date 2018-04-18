@@ -32,7 +32,7 @@ import javax.swing.table.DefaultTableModel;
   
 public class Menu extends JFrame implements ActionListener, ItemListener{ 
      
-    private JButton Recherche, MaJ, Reporting, Connexion; //Bouttons de la fenêtre
+    private JButton Recherche, MaJ, Reporting; //Bouttons de la fenêtre
     private JPanel p0, p1, p2, p3; 
     private JComboBox combo = new JComboBox();
     public JTable jtable = new JTable();
@@ -122,18 +122,19 @@ public class Menu extends JFrame implements ActionListener, ItemListener{
         p3 = new JPanel();
         
         p0.setLayout(new GridLayout(1, 1)); 
-        p1.setLayout(new GridLayout(0,1,-5,5)); 
+        p1.setLayout(new GridLayout(0,1)); 
         
-        p2.setLayout(new GridLayout(15, 4)); 
+        p2.setLayout(new GridLayout(10, 1)); 
         
         
         p0.add(Recherche); 
         p0.add(MaJ); 
         p0.add(Reporting); 
         
+         p2.add(combo);
         p1.add(jScrollPane); 
         
-        p2.add(combo);
+       
         
         
         
